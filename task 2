@@ -10,13 +10,17 @@ from collections.abc import Sequence
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
+    '''
+    Function check fibonacci's main characteristics: length of the sequence must be 3 or more,
+        and every number must be the sum of the previous two.
+    '''
     if len(data) <= 2:
         return False
-    is_match = 0
+    okey = 0
     for i in range(len(data)-2):
         if data[i] + data[i+1] == data[i+2]:
-            is_match += 1
-    if is_match == len(data)-2:
+            okey += 1
+    if okey == len(data)-2:
         return True
     else:
         return False
