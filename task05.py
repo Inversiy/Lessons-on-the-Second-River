@@ -32,7 +32,3 @@ def find_maximal_subarray_sum(nums: List[int], k: int) -> int:
                     elements_sum[i] = subsum
                 subsum = 0
     return max(elements_sum)
-
-nums = [-1, -3, -1, -3, -5, -3, -6, -7] 
-k = 3
-print(find_maximal_subarray_sum(nums, k))
