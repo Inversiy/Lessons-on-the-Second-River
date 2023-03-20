@@ -23,6 +23,11 @@ from typing import Tuple
 
 
 def cache(func: Callable) -> Callable:
+    '''
+        This function can save the cache in the dictionary. If
+        calculating value is in dict, function return if, else
+        function calculate it and write to the dict.
+    '''
     cache_values = {}
     def catching(*args):
         if not cache_values.get(args):
